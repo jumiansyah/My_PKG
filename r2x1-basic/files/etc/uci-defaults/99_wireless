@@ -15,20 +15,20 @@ do
   # [ "$SSID" != "OpenWrt" ] && continue
   uci set wireless."$RADIO".disabled="0"
   uci set wireless."$RADIO".country="US"
-  uci set wireless."$RADIO".cell_density="1"
+  # uci set wireless."$RADIO".cell_density="1"
   if [ "$BAND" = "2g" ];then
-    uci set wireless.default_"$RADIO".ssid="OpenWrt-${MD5}"
+    uci set wireless.default_"$RADIO".ssid="Notion-${MD5}"
     uci set wireless.default_"$RADIO".ifname="wifi-2g"
     uci set wireless."$RADIO".channel="${C2G}"
   else
-    uci set wireless.default_"$RADIO".ssid="OpenWrt-${MD5}-5G"
+    uci set wireless.default_"$RADIO".ssid="Notion-${MD5}-5G"
     uci set wireless.default_"$RADIO".ifname="wifi-5g"
     uci set wireless."$RADIO".channel="${C5G}"
   fi
   uci set wireless.default_"$RADIO".encryption="psk2"
-  uci set wireless.default_"$RADIO".key="OW${MD5}"
-  # uci set wireless.default_"$RADIO".skip_inactivity_poll="1"
-  # uci set wireless.default_"$RADIO".disassoc_low_ack="0"
+  uci set wireless.default_"$RADIO".key="OP${MD5}"
+  uci set wireless.default_"$RADIO".skip_inactivity_poll="1"
+  uci set wireless.default_"$RADIO".disassoc_low_ack="0"
   uci -q commit wireless
 done
 

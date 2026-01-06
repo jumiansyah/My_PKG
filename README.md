@@ -1,2 +1,2 @@
-## R281 Basic
-This is for R281 router.
+## Notion R2x1 Basic
+This is for Notion R2x1 router.
