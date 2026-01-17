@@ -1,5 +1,3 @@
-# Copyright (c) 2023 LENAR
-
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=r2x1-basic
@@ -14,8 +12,8 @@ PKG_ARCH:=mipsel_24kc
 include $(INCLUDE_DIR)/package.mk
 
 define Package/$(PKG_NAME)
-	SECTION:=custom
-	CATEGORY:=Packages
+	SECTION:=Custom
+	CATEGORY:=Extra packages
 	TITLE:=R2x1 Basic
 	URL:=https://github.com/0x4C334E3438/My_PKG
 endef
